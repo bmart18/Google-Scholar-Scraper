@@ -13,7 +13,6 @@ def checklink(link):
         #add link to a list or something? download pdf or somethin
 
 def main(link):
-    # Use a breakpoint in the code line below to debug your script.
     page = requests.get(link)
     soup = BeautifulSoup(page.text, 'html.parser')
     titles = soup.find_all('h3')
